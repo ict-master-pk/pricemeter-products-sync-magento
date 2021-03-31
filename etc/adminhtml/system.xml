@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="pricemeter" translate="label" sortOrder="999">
+			<label>Price Meter</label>
+		</tab>
+		<section id="pm_general" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+			<label>General</label>
+			<tab>pricemeter</tab>
+			<resource>IctMasterPk_PricemeterProductsSync::config_ictmasterpk_pricemeterproductssync</resource>
+			<group id="pm_settings" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>Settings</label>
+				<field id="pm_api_token" type="text" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Price Meter API Token</label>
+					<comment>Get API token from Price Meter &gt; My Stores &gt; Import Settings</comment>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>

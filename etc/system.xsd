@@ -1,0 +1,14 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:element name="config">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="price_meter" type="price_meterType" maxOccurs="unbounded" minOccurs="0"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType type="price_meterType">
+		<xs:sequence>
+			<xs:element name="pm_api_token" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
