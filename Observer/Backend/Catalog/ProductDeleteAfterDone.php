@@ -3,13 +3,13 @@
  * Copyright ©  All rights reserved.
  * See COPYING.txt for license details.
  */
+declare(strict_types=1);
 
 namespace IctMasterPk\PricemeterProductsSync\Observer\Backend\Catalog;
 
-use IctMasterPk\PricemeterProductsSync\Helper\Data;
 use IctMasterPk\PricemeterProductsSync\Helper\Product;
 
-class ProductSaveAfter implements \Magento\Framework\Event\ObserverInterface
+class ProductDeleteAfterDone implements \Magento\Framework\Event\ObserverInterface
 {
     protected $logger;
 
@@ -41,15 +41,8 @@ class ProductSaveAfter implements \Magento\Framework\Event\ObserverInterface
     ) {
         $_product = $observer->getProduct();
 
-        // If sync status got changed, then it will only occur programmatically and only that field got changed,
-        // so instead of resending api call just ignore event for that change,
-        // or else it will resend update api call
-        if ($_product->dataHasChangedFor(Data::PM_SYNC_STATUS)) {
-            return;
-        }
-
         try {
-            $response = $this->productHelper->insertOrUpdatePmProduct($_product);
+            $response = $this->productHelper->deletePmProduct($_product->getId());
         } catch (\Exception $e) {
             $response = [
                 'status' => false,
@@ -66,3 +59,4 @@ class ProductSaveAfter implements \Magento\Framework\Event\ObserverInterface
         }
     }
 }
+
