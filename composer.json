@@ -1,15 +1,15 @@
 {
     "name": "ictmasterpk/module-pricemeterproductssync",
-    "description": "Price Meter Products Sync is the official Price Meter module for Magento users to allow them easily sync their products on Price Meter without much effort.",
+    "description": "Price Meter Products Sync is the official Price Meter extension for Magento users to allow them easily sync their products on Price Meter without much effort.",
     "type": "magento2-module",
     "license": "GPL-3.0",
+    "version": "1.0.0",
     "authors": [
         {
-            "name": "Bilal Iqbal",
+            "name": "Price Meter",
             "email": "bilal@pricemeter.pk"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "ict-master-pk/pricemeter-products-php": "dev-guzzle_655"
     },
