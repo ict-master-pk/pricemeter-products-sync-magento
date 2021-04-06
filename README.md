@@ -1,7 +1,5 @@
 # Price Meter Products Sync
 
-    ictmasterpk/module-pricemeterproductssync
-
 ## Intro
 Price Meter Products Sync is the official Price Meter extension for Magento users to allow them easily sync their products on Price Meter without much effort.
 
@@ -17,7 +15,7 @@ Price Meter Products Sync is the official Price Meter extension for Magento user
 
 ### Type 2: Composer
 
-- Install the module composer by running `composer require ictmasterpk/module-pricemeterproductssync`
+- Install the module composer by running `composer require ict-master-pk/module-pricemeterproductssync`
 - enable the module by running `php bin/magento module:enable IctMasterPk_PricemeterProductsSync`
 - apply database updates by running `php bin/magento setup:upgrade`\*
 - Flush the cache by running `php bin/magento cache:flush`
