@@ -206,7 +206,7 @@ class Product extends AbstractHelper
     {
         $apiToken = $this->helperData->getApiToken();
         if (!empty($apiToken)) {
-            return new \Pricemeter\Model\Product($apiToken);
+            return new \Pricemeter\Model\Product($apiToken, \Pricemeter\Model\Cms::MAGENTO);
         } else {
             throw new \Exception("Price Meter API token not set");
         }
